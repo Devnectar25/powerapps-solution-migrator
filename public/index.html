@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solution Migrator | Powercraft</title>
+  <link rel="icon" type="image/svg+xml" href="brand/powercraft-icon.svg">
+  <link rel="apple-touch-icon" href="brand/powercraft-icon.svg">
+  <meta name="theme-color" content="#200a40">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <a href="https://powercraft.co/" target="_blank" rel="noopener" aria-label="Powercraft website"><img class="brand-logo" src="brand/powercraft-logo-white.svg" alt="Powercraft"></a>
+      <span class="brand-divider" aria-hidden="true"></span>
+      <div>
+        <h1>PowerApps Solution Migrator</h1>
+        <p>Move Dataverse solutions between environments, within a tenant or across tenants</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span id="modeBadge" class="badge badge-warn" hidden>Demo mode · simulated data</span>
+      <nav class="top-nav" aria-label="Sections">
+        <button type="button" data-view="wizard">Migrate</button>
+        <button type="button" data-view="profiles">Profiles</button>
+        <button type="button" data-view="history">History</button>
+        <button type="button" data-view="settings">Settings</button>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="stepper" id="stepper" aria-label="Migration steps"></nav>
+
+  <main id="main" class="container"></main>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-card">
+      <div class="modal-head">
+        <span class="modal-icon" aria-hidden="true">!</span>
+        <h2 id="modalTitle">Something went wrong</h2>
+      </div>
+      <div class="modal-body" id="modalBody"></div>
+      <div class="modal-actions" id="modalActions"></div>
+    </div>
+  </div>
+
+  <footer class="app-footer">Powered by <a href="https://powercraft.co/" target="_blank" rel="noopener">Powercraft</a> · Microsoft Power Platform consulting</footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="account.js"></script>
+  <script src="app.js"></script>
+  <script src="report.js"></script>
+</body>
+</html>

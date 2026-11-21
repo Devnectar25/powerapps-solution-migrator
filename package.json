@@ -1,0 +1,22 @@
+{
+  "name": "powerapps-solution-migrator",
+  "version": "1.0.0",
+  "description": "Migrate Power Apps / Dataverse solutions between environments in the same tenant or across tenants",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "mock": "MOCK_MODE=true node server.js",
+    "test": "node --test test/*.test.js",
+    "diagnose": "node scripts/diagnose.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@azure/msal-node": "^7.2.0",
+    "adm-zip": "^0.6.1",
+    "express": "^5.3.0",
+    "undici": "^6.29.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
